@@ -1,5 +1,9 @@
 function createGameBoard() {
   const gameBoard = {
+    player_one_name: '',
+    player_two_name: '',
+    player_one_score: 0,
+    player_two_score: 0,
     player_one: [],
     player_two: [],
     player_turn: 1,
@@ -14,13 +18,29 @@ function createGameBoard() {
 
     start: function() {
       if (!this.game_started) {
+        this.chooseNames();
         this.game_started = true;
     }
 
       if (this.game_over == true) {
         this.newGame();
-        this.game_started = true;
       }
+    },
+
+    chooseNames: function() {
+      do {
+        this.player_one_name = prompt("First player (X), write a name (4 to 16 characters):");
+      } while (this.player_one_name.length < 4 || this.player_one_name.length > 16);
+
+      let nameField = document.getElementById('player_one_name');
+      nameField.innerHTML = `${this.player_one_name}`;
+      
+      do {
+        this.player_two_name = prompt("Second player (O), write a name (4 to 16 characters):");
+      } while (this.player_two_name.length < 4 || this.player_two_name.length > 16);
+
+      let secondNameField = document.getElementById('player_two_name');
+      secondNameField.innerHTML = `${this.player_two_name}`;
     },
 
     play: function(squareId, value) {
@@ -77,19 +97,26 @@ function createGameBoard() {
     },
 
     gameOver: function(n) {
-      let messageBox = document.getElementById("announcer");
-      let message = document.createElement("h2");
-
       if (n == 1) {
-        message.innerHTML = ` Player One Wins! `;
+        alert(this.player_one_name + " wins!");
+        this.player_one_score += 1;
       } else if (n == 2) {
-        message.innerHTML = ` Player Two Wins! `;
+        alert(this.player_two_name + " wins!");
+        this.player_two_score += 1;
       } else if (n == 0) {
-        message.innerHTML = ` It's a tie! `;
+        alert("It's a tie!");
       }
 
-      messageBox.appendChild(message);
+      this.updateScores();
       this.game_over = true;
+    },
+
+    updateScores: function() {
+      let player_one_score_display = document.getElementById("player-one-score");
+      player_one_score_display.innerHTML = `${this.player_one_score}`;
+
+      let player_two_score_display = document.getElementById("player-two-score");
+      player_two_score_display.innerHTML = `${this.player_two_score}`;
     },
 
     newGame: function() {
@@ -102,7 +129,7 @@ function createGameBoard() {
       this.player_two = [];
       this.player_turn = 1;
       this.player_moves = 0;
-      this.game_started = false;
+      this.game_started = true;
       this.game_over = false;
     },
 

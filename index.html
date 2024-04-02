@@ -9,14 +9,14 @@
 </head>
 <body>
   <div id="players">
-    <h1>Player One</h1>
-    <h1>VS</h1>
-    <h1>Player Two</h1>
+    <h1 id="player_one_name">Player 1</h1>
+    <h3>- VS -</h3>
+    <h1 id="player_two_name">Player 2</h1>
   </div>
-  <div id="announcer">
-  </div>
-  <div id="button">
+  <div id="scoreboard">
+    <h1 id="player-one-score">0</h1>
     <button onclick="game.start()">Press Me To Play!</button>
+    <h1 id="player-two-score">0</h1>
   </div>
   <div id="game-board">
     <div id="upper-left" class="square" onclick="game.play('upper-left', 0)"></div>
