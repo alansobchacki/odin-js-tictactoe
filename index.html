@@ -8,6 +8,27 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <div id="players">
+    <h1>Player One</h1>
+    <h1>VS</h1>
+    <h1>Player Two</h1>
+  </div>
+  <div id="announcer">
+  </div>
+  <div id="button">
+    <button onclick="game.start()">Press Me To Play!</button>
+  </div>
+  <div id="game-board">
+    <div id="upper-left" class="square" onclick="game.play('upper-left', 0)"></div>
+    <div id="upper-mid" class="square" onclick="game.play('upper-mid', 1)"></div>
+    <div id="upper-right" class="square" onclick="game.play('upper-right', 2)"></div>
+    <div id="mid-left" class="square" onclick="game.play('mid-left', 3)"></div>
+    <div id="mid" class="square" onclick="game.play('mid', 4)"></div>
+    <div id="mid-right" class="square" onclick="game.play('mid-right', 5)"></div>
+    <div id="lower-left" class="square" onclick="game.play('lower-left', 6)"></div>
+    <div id="lower-mid" class="square" onclick="game.play('lower-mid', 7)"></div>
+    <div id="lower-right" class="square" onclick="game.play('lower-right', 8)"></div>    
+    </div>
+  </div>
 </body>
 </html>

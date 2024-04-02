@@ -1,0 +1,38 @@
+p {
+  font-size: 100px;
+}
+
+#players {
+  display: flex;
+  justify-items: center;
+  text-align: center;
+}
+
+#players h1 {
+  width: 33%;
+}
+
+#button {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+#button button {
+  width: 33%;
+  height: 50px;
+}
+
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+}
+
+.square {
+  width: 33%;
+  height: 250px;
+  background-color: gray;
+  border: 2px solid #ccc;
+}
+
