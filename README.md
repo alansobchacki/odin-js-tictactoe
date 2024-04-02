@@ -1,4 +1,4 @@
-Project: Tic-Tac-Toe [2/12]
+Project: Tic-Tac-Toe
 =============
 
 A basic app that allows users to play a 'hotseat' game of tic-tac-toe against another player.
@@ -8,7 +8,7 @@ Here's the [live project demo.](https://alansobchacki.github.io/odin-js-tictacto
 About
 -----
 
-This project was completed as part of [The Odin Project](https://www.theodinproject.com/) [Javascript](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript) curriculum. It is the second project required for completion of the JavaScript Course. 
+This project was completed as part of [The Odin Project](https://www.theodinproject.com/) [Javascript](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript) curriculum. It is the second project required for completion of the JavaScript Course [2/12].
 
 These were the project requirements:
 
